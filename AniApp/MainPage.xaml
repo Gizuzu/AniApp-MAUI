@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AniApp.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25" VerticalOptions="Center">
+
+            <Image HeightRequest="200" Source="hello.png" HorizontalOptions="Center" />
+
+            <Label
+                Text="Привет!"
+                Style="{StaticResource Headline}"
+                SemanticProperties.HeadingLevel="Level1" />
+
+            <Label
+                Text="Для продолжения нужно войти через Shikimori."
+                Style="{StaticResource SubHeadline}"
+                SemanticProperties.HeadingLevel="Level3"
+                SemanticProperties.Description="Для продолжения нужно войти через Shikimori." />
+
+            <ActivityIndicator x:Name="LoginProgress" IsRunning="false" HorizontalOptions="Center" VerticalOptions="Center" />
+            <Button
+                MaximumWidthRequest="500"
+                x:Name="LoginBtn"
+                Text="Войти" 
+                Clicked="OnLoginClicked"
+                HorizontalOptions="Fill" />
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
